@@ -33,7 +33,7 @@ export default function Game() {
           };
         })
       );
-      console.log(array);
+
       setArray(newArray);
     };
 
