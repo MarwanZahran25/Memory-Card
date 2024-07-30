@@ -25,7 +25,7 @@ export default function Game() {
   useEffect(() => {
     const fetchData = async () => {
       let newArray = await Promise.all(
-        initialArray.map(async (poki) => {
+        array.map(async (poki) => {
           let apiCall = `https://pokeapi.co/api/v2/pokemon/${poki}/`;
           const res = await fetch(apiCall);
           const data = await res.json();
