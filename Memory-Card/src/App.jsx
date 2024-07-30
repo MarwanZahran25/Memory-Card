@@ -1,6 +1,5 @@
 // eslint-disable-next-line no-unused-vars
 import { useState } from "react";
-import Card from "./components/Card";
 import Game from "./components/Game";
 
 function App() {
