@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Card from "./Card";
 import shuffleArray from "./shuffleArray";
 import Header from "./Header";
-import Footer from "./footer";
+import Footer from "./Footer";
 export default function Game() {
   const initialArray = [
     "35",
@@ -86,6 +86,7 @@ export default function Game() {
         const shuffeld = shuffleArray(arr);
         return shuffeld;
       });
+      setPreviousChoices([]);
     }
   }
 }
