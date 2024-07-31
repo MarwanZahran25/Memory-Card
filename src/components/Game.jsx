@@ -43,29 +43,7 @@ export default function Game() {
 
     fetchData();
   }, []);
-
-  return (
-    <div>
-      <Header currentScore={currentScore} bestScore={bestScore} />
-      <div className="flex flex-col items-center flex-wrap">
-        <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4 py-12 ">
-          {array.map((pokiObj) => {
-            return (
-              <Card
-                key={pokiObj.id}
-                name={pokiObj.name}
-                image={pokiObj.image}
-                id={pokiObj.id}
-                onClick={onClick}
-              />
-            );
-          })}
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
-  function onClick(id) {
+  const onClick = (id) => {
     if (!previousChoices.includes(id)) {
       setPreviousChoices([...previousChoices, id]);
       setCurrentScore((current) => {
@@ -88,5 +66,26 @@ export default function Game() {
       });
       setPreviousChoices([]);
     }
-  }
+  };
+  return (
+    <div>
+      <Header currentScore={currentScore} bestScore={bestScore} />
+      <div className="flex flex-col items-center flex-wrap">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4 py-12 ">
+          {array.map((pokiObj) => {
+            return (
+              <Card
+                key={pokiObj.id}
+                name={pokiObj.name}
+                image={pokiObj.image}
+                id={pokiObj.id}
+                onClick={onClick}
+              />
+            );
+          })}
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
 }
