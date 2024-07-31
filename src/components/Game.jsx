@@ -5,18 +5,18 @@ import Header from "./Header";
 import Footer from "./Footer";
 export default function Game() {
   const initialArray = [
-    "35",
-    "36",
-    "37",
+    "101",
     "38",
-    "39",
     "40",
-    "41",
-    "42",
-    "43",
-    "44",
-    "45",
-    "46",
+    "70",
+    "78",
+    "81",
+    "90",
+    "93",
+    "54",
+    "76",
+    "61",
+    "50",
   ];
   const [array, setArray] = useState(initialArray);
   const [previousChoices, setPreviousChoices] = useState([]);
