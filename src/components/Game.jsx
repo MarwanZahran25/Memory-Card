@@ -70,7 +70,7 @@ export default function Game() {
   return (
     <div>
       <Header currentScore={currentScore} bestScore={bestScore} />
-      <div className="flex flex-col items-center flex-wrap">
+      <div className="flex flex-col items-center flex-wrap p-14">
         <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4 py-12 ">
           {array.map((pokiObj) => {
             return (
